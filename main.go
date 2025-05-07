@@ -12,7 +12,6 @@ import (
 	"path/filepath"
 	"runtime"
 	"strings"
-	"syscall"
 	"time"
 )
 
@@ -530,6 +529,7 @@ func printGlobalActivationInstruction(profilePath string) {
 	fmt.Println("\nAfter that, you can open a new terminal or run 'go version' to verify the installation")
 }
 
+/*
 // getSystemInfo 检测系统内核版本和架构
 // 仅在 Linux 系统上使用 syscall.Uname
 func getSystemInfo() (kernelVersion, architecture string, err error) {
@@ -551,6 +551,7 @@ func getSystemInfo() (kernelVersion, architecture string, err error) {
 
 	return kernelVersion, architecture, nil
 }
+*/
 
 // mapArchitecture 将检测到的系统架构映射到 Go 的 GOARCH 值
 func mapArchitecture(detectedArch string) string {
